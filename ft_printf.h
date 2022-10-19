@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_str.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdelmas <hdelmas@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 09:17:57 by hdelmas           #+#    #+#             */
-/*   Updated: 2022/10/19 09:28:25 by hdelmas          ###   ########.fr       */
+/*   Created: 2022/10/19 08:55:12 by hdelmas           #+#    #+#             */
+/*   Updated: 2022/10/19 09:27:09 by hdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-	return (1);
-}
+# include <unistd.h>
+# include <stdarg.h>
+# include <stdlib.h>
 
-int	ft_putstr_fd(char *s, int fd)
-{
-	int	s_len;
+int	ft_strlen(const char *s);
+int	ft_putchar_fd(char c, int fd);
+int	ft_putstr_fd(char *s, int fd);
+int	ft_putnbr_base(long long int nbr, char *base, int nbr_len);
+int ft_printf(const char *format, ...);
 
-	if (!s)
-		return (0);
-	s_len = ft_strlen(s);
-	write(fd, s, s_len);
-	return (s_len);
-}
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		++i;
-	return (i);
-}
+#endif
