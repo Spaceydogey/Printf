@@ -6,7 +6,7 @@
 /*   By: hdelmas <hdelmas@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:17:57 by hdelmas           #+#    #+#             */
-/*   Updated: 2022/10/19 09:28:25 by hdelmas          ###   ########.fr       */
+/*   Updated: 2022/10/21 14:59:57 by hdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ int	ft_putstr_fd(char *s, int fd)
 	int	s_len;
 
 	if (!s)
-		return (0);
+	{
+		write(fd, "(null)", 6);
+		return (6);
+	}
 	s_len = ft_strlen(s);
 	write(fd, s, s_len);
 	return (s_len);

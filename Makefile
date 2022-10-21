@@ -1,10 +1,8 @@
 NAME = libftprintf.a
  
-SRCS = 	
-		
+SRCS = ft_printf.c ft_putnbr_base.c utils_str.c\
+	   
 OBJ = $(SRCS:.c=.o)
-
-BONUSOBJ = $(BONUS:.c=.o)
 
 AR = ar -rcs
 

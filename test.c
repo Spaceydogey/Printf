@@ -2,9 +2,10 @@
 #include "ft_printf.h"
 int main()
 {
-	char *str = "%%test [%p] ";
-		
-	printf("len : [%d] \n",ft_strlen(str) - 2);
-	printf("printf len : [%d] \n",printf(str,str));
-	printf("ft len : [%d] \n",ft_printf(str,str));
+//	char *str = "(test [%s] %";
+	ft_printf("%");
+//	char *str1 = "(test [%s])";
+	//char *null = NULL;
+//	printf("len : {%d} \n",ft_strlen(str1));
+//	printf("printf len : [%d] \n",printf("test [%s] %","oi"));
 }
