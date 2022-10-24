@@ -6,7 +6,7 @@
 /*   By: hdelmas <hdelmas@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:58:18 by hdelmas           #+#    #+#             */
-/*   Updated: 2022/10/21 18:05:40 by hdelmas          ###   ########.fr       */
+/*   Updated: 2022/10/24 15:13:24 by hdelmas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ int	ft_printf(const char *format, ...)
 			format++;
 		}
 	}
+	va_end(ap);
 	return (print_len);
 }
